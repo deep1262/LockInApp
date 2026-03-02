@@ -1,5 +1,5 @@
-import React from 'react';
-import {useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
+import {Animated} from 'react-native';
 import {scheduleDailyNotification} from './android/app/src/main/utils/notifications';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -11,6 +11,8 @@ import GoalScreen from './android/app/src/main/screens/GoalScreen';
 import TodoScreen from './android/app/src/main/screens/TodoScreen';
 import EmergencyScreen from './android/app/src/main/screens/EmergencyScreen';
 import StatsScreen from './android/app/src/main/screens/StatsScreen';
+import SplashScreen from './android/app/src/main/components/SplashScreen';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -18,13 +20,11 @@ const TabIcon = ({label, color}: {label: string; color: string}) => (
   <Text style={{fontSize: 20, color}}>{label}</Text>
 );
 
-export default function App() {
-  useEffect(() => {
-    scheduleDailyNotification();
-  }, []);
+function MainApp() {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        sceneContainerStyle={{backgroundColor: '#0a0a0a'}}
         screenOptions={{
           tabBarStyle: {backgroundColor: '#0a0a0a', borderTopColor: '#222'},
           tabBarActiveTintColor: '#ff3333',
@@ -76,6 +76,45 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+export default function App() {
+  const [splashDone, setSplashDone] = useState(false);
+  const appOpacity = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    scheduleDailyNotification();
+  }, []);
+
+  const handleSplashFinish = () => {
+    setSplashDone(true);
+  };
+
+  useEffect(() => {
+    if (splashDone) {
+      Animated.timing(appOpacity, {
+        toValue: 1,
+        duration: 800,
+        useNativeDriver: true,
+      }).start();
+    }
+  }, [splashDone]);
+
+  return (
+    <View style={{flex: 1, backgroundColor: '#0a0a0a'}}>
+      {splashDone && (
+        <Animated.View style={{flex: 1, opacity: appOpacity, backgroundColor: '#0a0a0a'}}>
+          <MainApp />
+        </Animated.View>
+      )}
+      {!splashDone && (
+        <View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0}}>
+          <SplashScreen onFinish={handleSplashFinish} />
+        </View>
+      )}
+    </View>
+  );
+}
+
 
 const s = StyleSheet.create({
   screen: {flex: 1, backgroundColor: '#0a0a0a', justifyContent: 'center', alignItems: 'center'},
