@@ -6,8 +6,14 @@ A discipline and accountability app for men who want to quit compulsive habits, 
 
 ## 📱 Screenshots
 
-> Coming soon
+| App | Home | Goal |
+|-----|------|------|
+| ![App](screenshots/app.png) | ![Home](screenshots/home.png) | ![Goal](screenshots/goal.png) |
 
+| Tasks | SOS | Stats |
+|-------|-----|-------|
+| ![Tasks](screenshots/tasks.png) | ![SOS](screenshots/sos.png) | ![Stats](screenshots/stats.png) |
+```
 ---
 
 ## ✨ Features
