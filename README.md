@@ -16,7 +16,7 @@ A discipline and accountability app for men who want to quit compulsive habits, 
 ```
 ---
 
-## ✨ Features
+✨ Features
 
 - **Streak Counter** — tracks days clean with milestone badges (7, 14, 30, 90, 180, 365 days)
 - **Goal Setting** — set a target duration and write your personal "why"
