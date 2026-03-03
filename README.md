@@ -18,49 +18,49 @@ A discipline and accountability app for men who want to quit compulsive habits, 
 
 ✨ Features
 
-- **Streak Counter** — tracks days clean with milestone badges (7, 14, 30, 90, 180, 365 days)
-- **Goal Setting** — set a target duration and write your personal "why"
-- **Daily Tasks** — to-do list with categories: Work, Health, Self-improvement, Other
-- **SOS Emergency Screen** — urge timer, streak loss warning, and action prompts
-- **Stats Dashboard** — 30-day calendar, longest streak, total clean days
-- **Daily Notifications** — 7AM push notification with streak count and days remaining
-- **Custom Dark Theme** — masculine, minimal, red and black design
-- **Splash Screen** — animated intro screen on launch
-- **"Faahhh" Sound** — plays on relapse confirmation 😂
+🔥 Streak Counter — tracks days clean with milestone badges (7, 14, 30, 90, 180, 365 days)
+🎯 Goal Setting — set a target duration and write your personal "why"
+✅ Daily Tasks — to-do list with categories: Work, Health, Self-improvement, Other
+🆘 SOS Emergency Screen — urge timer, streak loss warning, and action prompts
+📊 Stats Dashboard — 30-day calendar, longest streak, total clean days
+🔔 Daily Notifications — 7AM push notification with streak count and days remaining
+🖤 Custom Dark Theme — masculine, minimal, red and black design
+⚡ Splash Screen — animated intro screen on launch
+😂 Faahhh Sound — plays on relapse confirmation
 
 ---
 
-## 🛠 Tech Stack
+🛠 Tech Stack
 
-- React Native 0.84
-- TypeScript
-- React Navigation (Bottom Tabs)
-- AsyncStorage
-- Notifee (Push Notifications)
-- react-native-sound
+React Native 0.84
+TypeScript
+React Navigation
+AsyncStorage
+Notifee
+react-native-sound
 
 ---
 
-## 🚀 Getting Started
+🚀 Getting Started
 
-### Prerequisites
-- Node.js 18+
-- Android Studio (for Android)
-- Xcode (for iOS)
-- JDK 17
+Prerequisites
+Node.js 18+
+Android Studio
+Xcode
+JDK 17
 
-### Installation
-```bash
-# Clone the repo
+Installation
+
+Clone the repo
 git clone https://github.com/deep1262/LockInApp.git
 
-# Navigate into project
+Navigate into project
 cd LockInApp
 
-# Install dependencies
+Install dependencies
 npm install
 
-# For iOS only
+iOS only
 cd ios && pod install && cd ..
 ```
 
