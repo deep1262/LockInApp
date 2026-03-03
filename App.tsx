@@ -1,17 +1,17 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Animated} from 'react-native';
-import {scheduleDailyNotification} from './android/app/src/main/utils/notifications';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {View, Text, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import HomeScreen from './android/app/src/main/screens/HomeScreen';
-import GoalScreen from './android/app/src/main/screens/GoalScreen';
-import TodoScreen from './android/app/src/main/screens/TodoScreen';
-import EmergencyScreen from './android/app/src/main/screens/EmergencyScreen';
-import StatsScreen from './android/app/src/main/screens/StatsScreen';
-import SplashScreen from './android/app/src/main/components/SplashScreen';
+import {scheduleDailyNotification} from './src/utils/notifications';
+import HomeScreen from './src/screens/HomeScreen';
+import GoalScreen from './src/screens/GoalScreen';
+import TodoScreen from './src/screens/TodoScreen';
+import EmergencyScreen from './src/screens/EmergencyScreen';
+import StatsScreen from './src/screens/StatsScreen';
+import SplashScreen from './src/components/SplashScreen';
 
 
 const Tab = createBottomTabNavigator();
