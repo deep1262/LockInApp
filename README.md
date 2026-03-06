@@ -104,18 +104,6 @@ LockInApp/
 
 ---
 
-## 🗺 Roadmap
-
-- [ ] Google / Email authentication
-- [ ] Cloud sync across devices (Firebase)
-- [ ] App icon
-- [ ] Onboarding screen
-- [ ] Streak sharing to social media
-- [ ] Settings screen
-- [ ] Widget support
-
----
-
 ## 📄 License
 
 Private project — all rights reserved.
